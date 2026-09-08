@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Guru Ravidas Parmarth Trust Premium Double Heavy Frontend">
+<title>Guru Ravidas Parmarth Trust | Premium Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast" class="toast"></div>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="logo">ॐ</span><span><b>Guru Ravidas</b><small>Parmarth Trust</small></span></a>
+    <button class="menu" id="menu">☰</button>
+    <nav id="nav">
+      <a href="#home">Home</a><a href="#membership">Membership</a><a href="#verify">Verification</a>
+      <a href="#services">Services</a><a href="#donation">Donation</a><a href="#events">Events</a>
+      <a href="#gallery">Gallery</a><a href="#contact">Contact</a><button class="theme" id="theme">☾</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">सेवा • समानता • मानवता</span>
+      <h1>Guru Ravidas <span>Parmarth Trust</span></h1>
+      <p>समाज सेवा, शिक्षा, स्वास्थ्य, जागरूकता और मानव कल्याण के लिए एक आधुनिक और पारदर्शी digital trust portal.</p>
+      <div class="buttons"><a class="btn primary" href="#membership">Member बनें →</a><a class="btn outline" href="#donation">Donate Now</a></div>
+      <div class="trust-pills"><span>✓ Verified Applications</span><span>✓ Digital Services</span><span>✓ Mobile Responsive</span></div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-top"><span>TRUST PORTAL</span><b>2026</b></div>
+      <div class="mandala">ॐ</div>
+      <h3>एक मंच — अनेक सेवाएं</h3>
+      <p>Membership • Donation • Certificate • Complaint • Events</p>
+      <button class="mini-btn" onclick="openModal('Quick Services', quickServices())">Explore Services</button>
+    </div>
+  </div>
+  <div class="container stats">
+    <div><strong data-count="25">0</strong><span>Management Posts</span></div>
+    <div><strong data-count="1000">0</strong><span>Members</span></div>
+    <div><strong data-count="50">0</strong><span>Programs</span></div>
+    <div><strong data-count="10">0</strong><span>Years of Service</span></div>
+  </div>
+</section>
+
+<div class="ticker"><div class="container"><b>🔴 LIVE NOTICE:</b> शिक्षा सहायता • स्वास्थ्य जागरूकता • समाज सेवा • जरूरतमंद परिवार सहायता</div></div>
+
+<section class="section" id="about"><div class="container">
+  <div class="title"><span>ABOUT / PROJECTS</span><h2>Trust की सेवाओं को एक ही जगह लाएं</h2><p>Premium frontend architecture जिसमें public portal, member services और admin UI के लिए अलग sections तैयार हैं।</p></div>
+  <div class="cards three">
+    <article><i>🤝</i><h3>समाज सेवा</h3><p>सामुदायिक सहायता और जन-जागरूकता कार्यक्रमों के लिए digital support.</p><a href="#events">Programs →</a></article>
+    <article><i>📚</i><h3>शिक्षा सहयोग</h3><p>विद्यार्थियों के लिए शिक्षा, मार्गदर्शन और सहायता गतिविधियों को showcase करें।</p><a href="#projects">Projects →</a></article>
+    <article><i>❤️</i><h3>मानव कल्याण</h3><p>स्वास्थ्य, राहत और welfare campaigns को portal से manage करें।</p><a href="#donation">Support →</a></article>
+  </div>
+</div></section>
+
+<section class="section soft" id="membership"><div class="container">
+  <div class="title"><span>MEMBER REGISTRATION</span><h2>25 पदों में से अपना पद चुनें</h2><p>Post → automatic fee → application → payment details → UTR → pending verification.</p></div>
+  <div class="membership-layout">
+    <div class="panel">
+      <div class="field"><label>Membership Post</label><select id="post"></select></div>
+      <div class="price"><small>Applicable Membership Fee</small><strong id="fee">₹0</strong></div>
+      <button class="btn primary full" id="apply">Continue Application</button>
+      <div class="secure-note">🔒 Demo only • Real payment/backend integration required.</div>
+    </div>
+    <div class="panel process">
+      <h3>Application Workflow</h3>
+      <div class="workflow"><div><b>01</b><span>Post Select</span></div><div><b>02</b><span>Member Form</span></div><div><b>03</b><span>Payment + UTR</span></div><div><b>04</b><span>Admin Verify</span></div></div>
+      <div class="status-line"><span>Payment Status</span><b>Pending Verification</b></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="section" id="verify"><div class="container narrow">
+  <div class="title"><span>MEMBER VERIFICATION</span><h2>Member ID Verify करें</h2><p>Example format: GRT-2026-1001</p></div>
+  <form class="search" id="verifyForm"><input id="memberId" required placeholder="Enter Member ID"><button class="btn primary">Verify Member</button></form>
+  <div id="verifyResult" class="result hidden"></div>
+</div></section>
+
+<section class="section soft" id="services"><div class="container">
+  <div class="title"><span>DIGITAL SERVICES</span><h2>Member Portal</h2></div>
+  <div class="cards four">
+    <button class="service" onclick="openModal('Member Registration',memberRegistration())">👤<b>Registration</b><small>New member application</small></button>
+    <button class="service" onclick="openModal('ID Card Download',idCard())">🪪<b>ID Card</b><small>Preview / Download UI</small></button>
+    <button class="service" onclick="openModal('Certificate Section',certificate())">🏆<b>Certificate</b><small>Digital certificate UI</small></button>
+    <button class="service" onclick="openModal('Member Renewal',renewal())">🔄<b>Renewal</b><small>Membership renewal</small></button>
+    <button class="service" onclick="openModal('Payment Receipt',receipt())">🧾<b>Receipt</b><small>Transaction receipt</small></button>
+    <button class="service" onclick="openModal('Application Search',searchApp())">🔎<b>Application Search</b><small>Search application</small></button>
+    <button class="service" onclick="openModal('User Login',loginBox())">🔐<b>User Login</b><small>Member portal login</small></button>
+    <button class="service" onclick="openModal('Admin Login',adminLogin())">🛡️<b>Admin Login</b><small>Dashboard frontend</small></button>
+  </div>
+</div></section>
+
+<section class="section" id="admin"><div class="container">
+  <div class="title"><span>ADMIN DASHBOARD UI</span><h2>Management Control Center</h2><p>Frontend preview — real data/database अभी connected नहीं है।</p></div>
+  <div class="admin-grid">
+    <div class="admin-stat"><span>Applications</span><b>128</b><small>+12 this week</small></div>
+    <div class="admin-stat"><span>Pending Payments</span><b>34</b><small>Needs verification</small></div>
+    <div class="admin-stat"><span>Active Members</span><b>1,024</b><small>+28 this month</small></div>
+    <div class="admin-stat"><span>Complaints</span><b>17</b><small>5 open</small></div>
+  </div>
+  <div class="dashboard">
+    <div class="dash-panel"><h3>Recent Applications</h3><table><thead><tr><th>ID</th><th>Post</th><th>Status</th></tr></thead><tbody><tr><td>GRT-2026-1001</td><td>जिला अध्यक्ष</td><td><span class="badge pending">Pending</span></td></tr><tr><td>GRT-2026-1002</td><td>सदस्य</td><td><span class="badge approved">Verified</span></td></tr><tr><td>GRT-2026-1003</td><td>प्रदेश सचिव</td><td><span class="badge pending">Pending</span></td></tr></tbody></table></div>
+    <div class="dash-panel"><h3>Quick Admin Actions</h3><div class="admin-actions"><button onclick="toast('Member verification demo')">✓ Verify Members</button><button onclick="toast('Payment verification demo')">₹ Verify Payments</button><button onclick="toast('News manager demo')">📰 Manage News</button><button onclick="toast('Gallery manager demo')">📸 Manage Gallery</button><button onclick="toast('Events manager demo')">📅 Manage Events</button><button onclick="toast('Reports demo')">📊 Reports</button></div></div>
+  </div>
+</div></section>
+
+<section class="section soft" id="donation"><div class="container">
+  <div class="title"><span>DONATION & DONOR LIST</span><h2>Support Trust Projects</h2></div>
+  <div class="donation-layout">
+    <div class="donation-info"><div class="heart">♥</div><h3>आपका सहयोग, किसी के काम आ सकता है</h3><p>Education, health, relief और community programs के लिए सहयोग करें।</p><div class="upi"><small>PAYMENT METHOD</small><b>UPI / Payment Gateway</b><span>Production integration required</span></div></div>
+    <form class="panel" id="donationForm"><input required placeholder="Donor Name"><input required type="number" min="1" placeholder="Donation Amount ₹"><input placeholder="UTR / Transaction ID"><button class="btn primary full">Submit Donation</button></form>
+  </div>
+  <h3 class="sub">Recent Donors</h3><div class="donors"><div>🙏 Anonymous <b>₹5,100</b></div><div>🌟 Community Supporter <b>₹2,100</b></div><div>❤️ Well Wisher <b>₹1,100</b></div><div>🕊️ Supporter <b>₹501</b></div></div>
+</div></section>
+
+<section class="section" id="team"><div class="container">
+  <div class="title"><span>25 POST MANAGEMENT TEAM</span><h2>Management Structure</h2></div>
+  <div class="team" id="teamGrid"></div>
+</div></section>
+
+<section class="section soft" id="events"><div class="container">
+  <div class="title"><span>NEWS ROOM • EVENTS • ONGOING PROGRAMS</span><h2>Latest Activities</h2></div>
+  <div class="cards three">
+    <article class="news"><span>UPCOMING</span><h3>सामुदायिक जागरूकता कार्यक्रम</h3><p>Event date, venue और registration details यहां publish करें।</p><a href="#contact">Details →</a></article>
+    <article class="news"><span>ONGOING</span><h3>शिक्षा सहायता अभियान</h3><p>विद्यार्थियों और जरूरतमंद परिवारों के लिए ongoing initiative.</p><a href="#donation">Support →</a></article>
+    <article class="news"><span>PRESS / NOTICE</span><h3>Latest Trust Notice</h3><p>Official notice, press release और announcements के लिए section.</p><a href="#legal">Open Notice →</a></article>
+  </div>
+</div></section>
+
+<section class="section" id="gallery"><div class="container">
+  <div class="title"><span>PHOTO / VIDEO GALLERY</span><h2>Media Gallery</h2></div>
+  <div class="tabs"><button class="active" data-filter="all">All</button><button data-filter="photo">Photos</button><button data-filter="video">Videos</button></div>
+  <div class="gallery" id="galleryGrid"></div>
+</div></section>
+
+<section class="section soft" id="complaint"><div class="container">
+  <div class="title"><span>ONLINE COMPLAINT</span><h2>Complaint + Status Tracking</h2></div>
+  <div class="membership-layout">
+    <form class="panel" id="complaintForm"><input required placeholder="Name"><input required placeholder="Mobile Number"><select><option>Membership</option><option>Payment</option><option>Certificate</option><option>Other</option></select><textarea required placeholder="Complaint / Message"></textarea><button class="btn primary">Submit Complaint</button></form>
+    <div class="panel"><h3>Track Complaint</h3><form class="search" id="trackForm"><input id="complaintId" required placeholder="CMP-2026-1001"><button class="btn">Track</button></form><div id="trackResult"></div></div>
+  </div>
+</div></section>
+
+<section class="section" id="projects"><div class="container">
+  <div class="title"><span>TRUST PROJECTS</span><h2>Projects & Initiatives</h2></div>
+  <div class="project-grid"><article><b>01</b><h3>Education Support</h3><p>विद्यार्थी सहायता और educational awareness.</p></article><article><b>02</b><h3>Health Awareness</h3><p>स्वास्थ्य जागरूकता एवं community programs.</p></article><article><b>03</b><h3>Social Relief</h3><p>जरूरतमंद परिवारों के लिए relief initiatives.</p></article><article><b>04</b><h3>Youth Development</h3><p>युवा सहभागिता और skill awareness programs.</p></article></div>
+</div></section>
+
+<section class="section soft" id="legal"><div class="container">
+  <div class="title"><span>LEGAL DOCUMENTS</span><h2>Policies & Official Documents</h2></div>
+  <div class="legal"><button onclick="openLegal('Trust Deed')">📄 Trust Deed</button><button onclick="openLegal('Privacy Policy')">🔒 Privacy Policy</button><button onclick="openLegal('Terms & Conditions')">📜 Terms</button><button onclick="openLegal('Refund Policy')">💳 Refund</button><button onclick="openLegal('Disclaimer')">⚠️ Disclaimer</button></div>
+</div></section>
+
+<section class="section" id="testimonials"><div class="container">
+  <div class="title"><span>TESTIMONIALS</span><h2>Community Voices</h2></div>
+  <div class="cards three"><article class="quote">“Trust की सेवा और समाज के प्रति प्रयास सराहनीय हैं।”<b>— Community Member</b></article><article class="quote">“Digital portal से information access आसान हुआ।”<b>— Member</b></article><article class="quote">“शिक्षा और जागरूकता के प्रयास उपयोगी हैं।”<b>— Well Wisher</b></article></div>
+</div></section>
+
+<section class="section soft" id="faq"><div class="container narrow">
+  <div class="title"><span>FAQ</span><h2>Frequently Asked Questions</h2></div>
+  <details><summary>क्या यह production backend है?</summary><p>नहीं, यह premium frontend demo है। PHP/MySQL, secure authentication और payment gateway को production में जोड़ना होगा।</p></details>
+  <details><summary>क्या membership fee बदली जा सकती है?</summary><p>हाँ। Demo fees JavaScript configuration में हैं; production में database/Admin Dashboard से manage करें।</p></details>
+  <details><summary>क्या Aadhaar/PAN store किया गया है?</summary><p>नहीं। इस frontend में sensitive identity data storage नहीं है। Production में encrypted और access-controlled storage जरूरी है।</p></details>
+</div></section>
+
+<section class="section contact" id="contact"><div class="container membership-layout">
+  <div><span class="eyebrow">CONTACT + WHATSAPP</span><h2>Trust से जुड़ें</h2><p>नीचे दिए demo contact details को official Trust information से replace करें।</p><div class="contact-links"><a href="tel:+919999999999">📞 Call</a><a href="https://wa.me/919999999999" target="_blank">💬 WhatsApp</a><a href="mailto:info@example.org">✉️ Email</a></div></div>
+  <form class="panel" id="contactForm"><input required placeholder="Your Name"><input required type="email" placeholder="Email"><textarea required placeholder="Message"></textarea><button class="btn primary full">Send Message</button></form>
+</div></section>
+</main>
+
+<footer><div class="container footer"><div class="brand"><span class="logo">ॐ</span><span><b>Guru Ravidas</b><small>Parmarth Trust</small></span></div><div class="footer-links"><a href="#legal">Privacy</a><a href="#legal">Terms</a><a href="#contact">Contact</a><a href="#home">↑ Top</a></div></div><div class="copyright">© 2026 Guru Ravidas Parmarth Trust • Premium Double-Heavy Frontend</div></footer>
+
+<div class="modal hidden" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<script src="script.js"></script>
+</body>
+</html>
